@@ -24,7 +24,11 @@ const AddComment = () => {
       );
       (state.rating = ''), (state.name = ''), (state.comments = '');
     }
+    refreshPage();
   };
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   const ChangeHandler = (event) => {
     setState({ ...state, [event.target.name]: event.target.value });
